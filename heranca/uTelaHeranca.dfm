@@ -12,7 +12,8 @@ object frmTeleHeranca: TfrmTeleHeranca
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poScreenCenter
+  Position = poDesigned
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object pgcPrincipal: TPageControl
@@ -25,18 +26,14 @@ object frmTeleHeranca: TfrmTeleHeranca
     TabOrder = 0
     object tabListagem: TTabSheet
       Caption = 'Listagem'
-    end
-    object tabManutencao: TTabSheet
-      Caption = 'Manuten'#231#227'o'
-      ImageIndex = 1
-      object pnlListagemTopo: TPanel
+      object Panel1: TPanel
         Left = 0
         Top = 0
         Width = 650
         Height = 57
         Align = alTop
         TabOrder = 0
-        object mskPesquisar: TMaskEdit
+        object mskPesquisa: TMaskEdit
           Left = 16
           Top = 16
           Width = 329
@@ -68,6 +65,10 @@ object frmTeleHeranca: TfrmTeleHeranca
         TitleFont.Style = []
       end
     end
+    object tabManutencao: TTabSheet
+      Caption = 'Manuten'#231#227'o'
+      ImageIndex = 1
+    end
   end
   object pnlRodape: TPanel
     Left = 0
@@ -76,7 +77,6 @@ object frmTeleHeranca: TfrmTeleHeranca
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 384
     object btnNovo: TBitBtn
       Left = 4
       Top = 6
@@ -84,6 +84,7 @@ object frmTeleHeranca: TfrmTeleHeranca
       Height = 25
       Caption = '&NOVO'
       TabOrder = 0
+      OnClick = btnNovoClick
     end
     object btnAlterar: TBitBtn
       Left = 85
@@ -92,6 +93,7 @@ object frmTeleHeranca: TfrmTeleHeranca
       Height = 25
       Caption = '&ALTERAR'
       TabOrder = 1
+      OnClick = btnAlterarClick
     end
     object btnCancelar: TBitBtn
       Left = 166
@@ -100,6 +102,7 @@ object frmTeleHeranca: TfrmTeleHeranca
       Height = 25
       Caption = '&CANCELAR'
       TabOrder = 2
+      OnClick = btnCancelarClick
     end
     object btnGravar: TBitBtn
       Left = 247
@@ -108,6 +111,7 @@ object frmTeleHeranca: TfrmTeleHeranca
       Height = 25
       Caption = '&GRAVAR'
       TabOrder = 3
+      OnClick = btnGravarClick
     end
     object btnApagar: TBitBtn
       Left = 328
@@ -116,6 +120,7 @@ object frmTeleHeranca: TfrmTeleHeranca
       Height = 25
       Caption = 'APAGA&R'
       TabOrder = 4
+      OnClick = btnApagarClick
     end
     object btnFechar: TBitBtn
       Left = 579
@@ -124,14 +129,26 @@ object frmTeleHeranca: TfrmTeleHeranca
       Height = 25
       Caption = '&FECHAR'
       TabOrder = 5
+      OnClick = btnFecharClick
     end
-    object DBNavigator1: TDBNavigator
+    object btnNavigator: TDBNavigator
       Left = 440
       Top = 6
       Width = 104
       Height = 25
+      DataSource = dtsListagem
       VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
       TabOrder = 6
     end
+  end
+  object QryListagem: TZQuery
+    Connection = dtmPrincipal.ConexaoDB
+    Params = <>
+    Left = 524
+    Top = 32
+  end
+  object dtsListagem: TDataSource
+    Left = 600
+    Top = 32
   end
 end
