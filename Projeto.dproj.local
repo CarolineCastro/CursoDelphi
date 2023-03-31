@@ -6,13 +6,16 @@
     <Transaction>2023/03/24 13:25:35.000.578,C:\Users\HS\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\CursoDelphi\uPrincipal.pas</Transaction>
     <Transaction>2023/03/24 13:25:43.000.467,C:\Users\HS\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\CursoDelphi\Projeto.dproj</Transaction>
     <Transaction>2023/03/27 09:51:48.000.297,=C:\CursoDelphi\Unit1.pas</Transaction>
-    <Transaction>2023/03/27 09:52:52.000.288,C:\CursoDelphi\datamodule\uDtmConexao.dfm=C:\CursoDelphi\Unit1.dfm</Transaction>
     <Transaction>2023/03/27 09:52:52.000.288,C:\CursoDelphi\datamodule\uDtmConexao.pas=C:\CursoDelphi\Unit1.pas</Transaction>
-    <Transaction>2023/03/28 09:16:21.499,=C:\CursoDelphi\Unit1.pas</Transaction>
-    <Transaction>2023/03/28 09:16:49.495,C:\CursoDelphi\heranca\uTelaHeranca.pas=C:\CursoDelphi\Unit1.pas</Transaction>
-    <Transaction>2023/03/28 09:16:49.495,C:\CursoDelphi\heranca\uTelaHeranca.dfm=C:\CursoDelphi\Unit1.dfm</Transaction>
-    <Transaction>2023/03/28 09:54:45.138,=C:\CursoDelphi\Unit1.pas</Transaction>
-    <Transaction>2023/03/28 09:55:32.945,C:\CursoDelphi\heranca\uCadCategoria.dfm=C:\CursoDelphi\Unit1.dfm</Transaction>
-    <Transaction>2023/03/28 09:55:32.945,C:\CursoDelphi\heranca\uCadCategoria.pas=C:\CursoDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/03/27 09:52:52.000.288,C:\CursoDelphi\datamodule\uDtmConexao.dfm=C:\CursoDelphi\Unit1.dfm</Transaction>
+    <Transaction>2023/03/28 09:16:21.000.499,=C:\CursoDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/03/28 09:16:49.000.495,C:\CursoDelphi\heranca\uTelaHeranca.pas=C:\CursoDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/03/28 09:16:49.000.495,C:\CursoDelphi\heranca\uTelaHeranca.dfm=C:\CursoDelphi\Unit1.dfm</Transaction>
+    <Transaction>2023/03/28 09:54:45.000.138,=C:\CursoDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/03/28 09:55:32.000.945,C:\CursoDelphi\heranca\uCadCategoria.dfm=C:\CursoDelphi\Unit1.dfm</Transaction>
+    <Transaction>2023/03/28 09:55:32.000.945,C:\CursoDelphi\heranca\uCadCategoria.pas=C:\CursoDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/03/30 09:33:34.000.683,=C:\CursoDelphi\terceiros\Enter.pas</Transaction>
+    <Transaction>2023/03/31 09:46:39.398,=C:\CursoDelphi\Unit1.pas</Transaction>
+    <Transaction>2023/03/31 09:46:51.972,C:\CursoDelphi\heranca\uEnum.pas=C:\CursoDelphi\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>
