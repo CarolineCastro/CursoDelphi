@@ -27,6 +27,7 @@ type
     grdListagem: TDBGrid;
     QryListagem: TZQuery;
     dtsListagem: TDataSource;
+    lblIndice: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
@@ -34,6 +35,9 @@ type
     procedure btnGravarClick(Sender: TObject);
     procedure btnApagarClick(Sender: TObject);
     procedure btnAlterarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure grdListagemTitleClick(Column: TColumn);
   private
     { Private declarations }
     EstadoDoCadastro : TEstadoDoCadastro;
@@ -133,11 +137,29 @@ begin
 
 end;
 
+procedure TfrmTeleHeranca.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  QryListagem.Close;
+end;
+
 procedure TfrmTeleHeranca.FormCreate(Sender: TObject);
 begin
   QryListagem.Connection := dtmPrincipal.ConexaoDB;
   dtsListagem.DataSet := QryListagem;
   grdListagem.DataSource := dtsListagem;
+end;
+
+procedure TfrmTeleHeranca.FormShow(Sender: TObject);
+begin
+  if (QryListagem.SQL.Text <> EmptyStr) then
+  begin
+    QryListagem.Open;
+  end;
+end;
+
+procedure TfrmTeleHeranca.grdListagemTitleClick(Column: TColumn);
+begin
+  ShowMessage(Column.FieldName);
 end;
 
 end.

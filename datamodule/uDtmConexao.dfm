@@ -7,13 +7,16 @@ object dtmPrincipal: TdtmPrincipal
     AutoEncodeStrings = True
     Catalog = ''
     Properties.Strings = (
-      'controls_cp=CP_UTF16')
-    HostName = ''
-    Port = 0
-    Database = ''
-    User = ''
-    Password = ''
-    Protocol = ''
+      'controls_cp=CP_UTF16'
+      'AutoEncodeStrings=True')
+    Connected = True
+    HostName = '.\KAPTUREALL'
+    Port = 1433
+    Database = 'vendas'
+    User = 'sa'
+    Password = 'K4ptur34ll'
+    Protocol = 'mssql'
+    LibraryLocation = 'C:\CursoDelphi\ntwdblib.dll'
     Left = 32
     Top = 24
   end

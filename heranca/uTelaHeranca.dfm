@@ -4,7 +4,7 @@ object frmTeleHeranca: TfrmTeleHeranca
   BorderStyle = bsDialog
   Caption = 'INFORME AQUI O T'#205'TULO'
   ClientHeight = 423
-  ClientWidth = 658
+  ClientWidth = 748
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,26 +13,37 @@ object frmTeleHeranca: TfrmTeleHeranca
   Font.Style = []
   OldCreateOrder = False
   Position = poDesigned
+  OnClose = FormClose
   OnCreate = FormCreate
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object pgcPrincipal: TPageControl
     Left = 0
     Top = 0
-    Width = 658
+    Width = 748
     Height = 382
-    ActivePage = tabManutencao
+    ActivePage = tabListagem
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 658
     object tabListagem: TTabSheet
       Caption = 'Listagem'
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 650
+        Width = 740
         Height = 57
         Align = alTop
         TabOrder = 0
+        ExplicitWidth = 650
+        object lblIndice: TLabel
+          Left = 16
+          Top = 0
+          Width = 75
+          Height = 13
+          Caption = 'CampoPesquisa'
+        end
         object mskPesquisa: TMaskEdit
           Left = 16
           Top = 16
@@ -54,7 +65,7 @@ object frmTeleHeranca: TfrmTeleHeranca
       object grdListagem: TDBGrid
         Left = 0
         Top = 57
-        Width = 650
+        Width = 740
         Height = 297
         Align = alClient
         TabOrder = 1
@@ -63,6 +74,7 @@ object frmTeleHeranca: TfrmTeleHeranca
         TitleFont.Height = -11
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = []
+        OnTitleClick = grdListagemTitleClick
       end
     end
     object tabManutencao: TTabSheet
@@ -73,10 +85,14 @@ object frmTeleHeranca: TfrmTeleHeranca
   object pnlRodape: TPanel
     Left = 0
     Top = 382
-    Width = 658
+    Width = 748
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitWidth = 658
+    DesignSize = (
+      748
+      41)
     object btnNovo: TBitBtn
       Left = 4
       Top = 6
@@ -123,16 +139,18 @@ object frmTeleHeranca: TfrmTeleHeranca
       OnClick = btnApagarClick
     end
     object btnFechar: TBitBtn
-      Left = 579
+      Left = 669
       Top = 6
       Width = 75
       Height = 25
+      Anchors = [akTop, akRight]
       Caption = '&FECHAR'
       TabOrder = 5
       OnClick = btnFecharClick
+      ExplicitLeft = 579
     end
     object btnNavigator: TDBNavigator
-      Left = 440
+      Left = 488
       Top = 6
       Width = 104
       Height = 25

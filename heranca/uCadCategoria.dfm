@@ -3,16 +3,51 @@ inherited frmCadCategoria: TfrmCadCategoria
   PixelsPerInch = 96
   TextHeight = 13
   inherited pgcPrincipal: TPageControl
+    ExplicitWidth = 748
     inherited tabListagem: TTabSheet
       inherited Panel1: TPanel
-        ExplicitTop = 0
+        ExplicitWidth = 740
+      end
+      inherited grdListagem: TDBGrid
+        DataSource = dtsListagem
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'categoriaId'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'descricao'
+            Visible = True
+          end>
       end
     end
   end
   inherited pnlRodape: TPanel
-    ExplicitTop = 382
+    ExplicitWidth = 748
+    inherited btnFechar: TBitBtn
+      ExplicitLeft = 669
+    end
     inherited btnNavigator: TDBNavigator
       Hints.Strings = ()
     end
+  end
+  inherited QryListagem: TZQuery
+    SQL.Strings = (
+      'SELECT categoriaId, descricao FROM categorias')
+    object QryListagemcategoriaId: TIntegerField
+      DisplayLabel = 'C'#243'digo'
+      FieldName = 'categoriaId'
+      ReadOnly = True
+    end
+    object QryListagemdescricao: TWideStringField
+      DisplayLabel = 'Descri'#231#227'o'
+      FieldName = 'descricao'
+      Size = 30
+    end
+  end
+  inherited dtsListagem: TDataSource
+    DataSet = QryListagem
   end
 end
